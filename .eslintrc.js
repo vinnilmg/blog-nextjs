@@ -8,6 +8,7 @@ module.exports = {
     'plugin:@typescript-eslint/recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
+    'plugin:prettier/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
@@ -21,5 +22,10 @@ module.exports = {
   rules: {
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     'react/react-in-jsx-scope': 'off',
+  },
+  settings: {
+    react: {
+      version: 'detect',
+    },
   },
 };
