@@ -1,30 +1,17 @@
 import { GetStaticProps } from 'next';
-import { PostData, PostsResponse } from '../domain/posts/post';
-
-const getPosts = async (): Promise<PostData[]> => {
-  const posts = await fetch(
-    'https://blog-strapi-455r.onrender.com/api/posts?populate=*',
-  );
-
-  const jsonPosts = (await posts.json()) as PostsResponse;
-  return jsonPosts.data;
-};
+import HomePage from '../containers/HomePage';
+import { getAllPosts } from '../data/posts/get-all-posts';
+import { PostData } from '../domain/posts/post';
 
 export type HomeProps = {
   posts: PostData[];
 };
 
 export default function Home({ posts }: HomeProps) {
-  return (
-    <div>
-      {posts.map((post) => (
-        <h2 key={post.attributes.slug}>{post.attributes.title}</h2>
-      ))}
-    </div>
-  );
+  return <HomePage posts={posts} />;
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const posts = await getPosts();
+  const posts = await getAllPosts();
   return { props: { posts } };
 };
