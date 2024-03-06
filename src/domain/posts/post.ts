@@ -1,5 +1,15 @@
 export type PostID = number;
 
+export type TextData = {
+  text: string;
+  type: string;
+};
+
+export type ContentData = {
+  type: string;
+  children: Array<TextData>;
+};
+
 export type PostAuthor = {
   id: PostID;
   name: string;
@@ -67,7 +77,7 @@ export type PostData = {
   id: PostID;
   attributes: {
     title: string;
-    content: string;
+    content: Array<ContentData>;
     slug: string;
     author: PostAuthor;
     category: PostCategory;

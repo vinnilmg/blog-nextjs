@@ -3,13 +3,22 @@ import { countAllPosts } from '../../data/posts/count-all-posts';
 import { getAllPosts } from '../../data/posts/get-all-posts';
 import { getPost } from '../../data/posts/get-post';
 import { PostData } from '../../domain/posts/post';
+import { concatenateContents } from '../../utils/concatenate-contents';
 
 export type DynamicPostProps = {
   post: PostData;
 };
 
 const DynamicPost = ({ post }: DynamicPostProps) => {
-  return <p>{post.attributes.title}</p>;
+  return (
+    <>
+      <p
+        dangerouslySetInnerHTML={{
+          __html: concatenateContents(post.attributes.content),
+        }}
+      />
+    </>
+  );
 };
 
 export default DynamicPost;
