@@ -3,6 +3,7 @@ import { Header } from '../../components/Header';
 import { Heading } from '../../components/Heading';
 import { MainContainer } from '../../components/MainContainer';
 import { PostCover } from '../../components/PostCover';
+import { PostDetails } from '../../components/PostDetails';
 import { PostData } from '../../domain/posts/post';
 import { concatenateContents } from '../../utils/concatenate-contents';
 
@@ -19,6 +20,11 @@ export const Post = ({ post }: PostProps) => {
         <PostCover
           coverUrl={post.attributes.cover.data.attributes.formats.large.url}
           alt={post.attributes.title}
+        />
+        <PostDetails
+          author={post.attributes.author.name}
+          category={post.attributes.category.name}
+          date={post.attributes.createdAt}
         />
         <div
           dangerouslySetInnerHTML={{

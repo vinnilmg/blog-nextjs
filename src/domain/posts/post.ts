@@ -81,10 +81,9 @@ export type PostData = {
     slug: string;
     author: PostAuthor;
     category: PostCategory;
-    created_by: PostCreatedBy;
-    updated_by: PostCreatedBy;
-    created_at: string;
-    updated_at: string;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
     cover: PostCover;
   };
 };
