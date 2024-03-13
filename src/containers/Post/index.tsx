@@ -22,8 +22,8 @@ export const Post = ({ post }: PostProps) => {
           alt={post.attributes.title}
         />
         <PostDetails
-          author={post.attributes.author.name}
-          category={post.attributes.category.name}
+          author={post.attributes.author.data.attributes.name}
+          category={post.attributes.category.data.attributes.name}
           date={post.attributes.createdAt}
         />
         <div

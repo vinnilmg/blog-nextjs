@@ -11,21 +11,29 @@ export type ContentData = {
 };
 
 export type PostAuthor = {
-  id: PostID;
-  name: string;
-  created_by: number;
-  updated_by: number;
-  created_at: string;
-  updated_at: string;
+  data: {
+    id: PostID;
+    attributes: {
+      name: string;
+      created_by: number;
+      updated_by: number;
+      created_at: string;
+      updated_at: string;
+    };
+  };
 };
 
 export type PostCategory = {
-  id: PostID;
-  name: string;
-  created_by: number;
-  updated_by: number;
-  created_at: string;
-  updated_at: string;
+  data: {
+    id: PostID;
+    attributes: {
+      name: string;
+      created_by: number;
+      updated_by: number;
+      created_at: string;
+      updated_at: string;
+    };
+  };
 };
 
 export type PostCreatedBy = {
