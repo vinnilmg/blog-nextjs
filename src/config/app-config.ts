@@ -3,3 +3,5 @@ export const POSTS_URL = `${API_URL}/posts`;
 
 export const SITE_NAME = 'Blog do Vinicius';
 export const SITE_URL = '';
+
+export const DISQUS_BLOG_SHORTNAME = 'meublog-6oo8atsefg';
