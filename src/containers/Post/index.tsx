@@ -21,7 +21,7 @@ export const Post = ({ post }: PostProps) => {
         <Heading>{post.attributes.title}</Heading>
 
         <PostCover
-          coverUrl={post.attributes.cover.data.attributes.formats.large.url}
+          coverUrl={post.attributes.cover.data.attributes.formats.small.url}
           alt={post.attributes.title}
         />
 
