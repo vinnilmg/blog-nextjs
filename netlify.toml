@@ -1,0 +1,10 @@
+[build]
+command = “npm run deploy:static”
+publish = “out”
+
+[[plugins]]
+package = “@netlify/plugin-nextjs”
+
+“devDependencies”: {
+“@netlify/plugin-nextjs”: “^3.0.1”,
+}
