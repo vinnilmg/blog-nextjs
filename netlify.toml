@@ -1,6 +1,7 @@
 [build]
-command = "npm run deploy:static && echo SITE_URL: $SITE_URL"
-publish = "out/"
+command = "npm run build
+functions = "out_functions"
+publish = "out_publish"
 
 [build.environment]
 NETLIFY_NEXT_PLUGIN_SKIP = "true"
