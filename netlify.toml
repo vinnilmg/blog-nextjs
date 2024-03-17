@@ -1,5 +1,5 @@
 [build]
-command = "npm run deploy:static && echo $SITE_URL"
+command = "npm run deploy:static && echo SITE_URL: $SITE_URL"
 publish = "out/"
 
 [build.environment]
