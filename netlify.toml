@@ -3,7 +3,7 @@ command = "npm run deploy:static"
 publish = "out/"
 
 [build.environment]
-NETLIFY_NEXT_PLUGIN_SKIP = true
+NETLIFY_NEXT_PLUGIN_SKIP = "true"
 NODE_VERSION = "v16.20.2"
 NPM_VERSION = "8.19.4"
 
