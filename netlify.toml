@@ -8,8 +8,4 @@ NODE_VERSION = "v16.20.2"
 NPM_VERSION = "8.19.4"
 
 [[plugins]]
-package = "@netlify/plugin-nextjs"
-
-"devDependencies": {
-  "@netlify/plugin-nextjs": "^3.0.1",
-}
+package = "@netlify/plugin-nextjs@3.0.1"
