@@ -15,5 +15,8 @@ export const getStaticProps: GetStaticProps = async () => {
   const posts = await getAllPosts(
     'sort=id:desc&pagination[start]=0&pagination[limit]=30',
   );
-  return { props: { posts } };
+  return {
+    props: { posts },
+    revalidate: 3, // Revalida a pagina de 3 em 3 segundos
+  };
 };
