@@ -49,6 +49,6 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
   const posts = await getPost(ctx.params.slug);
   return {
     props: { post: posts[0] },
-    revalidate: 5,
+    revalidate: 60,
   };
 };
