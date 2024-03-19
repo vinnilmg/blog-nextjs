@@ -16,7 +16,7 @@ export default function HomePage({ posts, category }: HomePageProps) {
   return (
     <>
       <Head>
-        <title>{SITE_NAME}</title>
+        <title>{category ? `${category} - ${SITE_NAME}` : SITE_NAME}</title>
         <meta name="description" content="Blog criado no curso de JS" />
       </Head>
       <Header />
