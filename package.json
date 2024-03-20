@@ -8,7 +8,9 @@
     "start": "next start",
     "lint": "next lint",
     "deploy:static": "next build && next export",
-    "postbuild": "next-on-netlify"
+    "postbuild": "next-on-netlify",
+    "test": "jest",
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@netlify/plugin-nextjs": "^3.0.1",
